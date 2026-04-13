@@ -1,2 +1,0 @@
-dvd.mp4 filter=lfs diff=lfs merge=lfs -text
-*.npy !text !filter !merge !diff
