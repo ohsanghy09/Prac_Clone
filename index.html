@@ -15,28 +15,65 @@
 
 <body class="bg-black text-white">
 
+  <!-- grid(행렬)로 자식 요소 배치하고 비율을 16:9로 설정 -->
   <div class="grid aspect-[16/9]">
 
     <!-- 비디오 배경, 여기서 column과 row의 start가 의미하는 건 "행렬" -->
     <video src="./dvd.mp4" autoplay muted loop class="col-start-1 row-start-1"></video>
 
-    <!-- 네비게이션 속성 -->
-    <nav class="col-start-1 row-start-1 m-8 text-sm font-medium border text-white mt-3">
-      
-      <!-- 네이게이션들 간 가로정렬 및 버튼 간격 조정 -->
+    <!-- 네비게이션 속성 행렬(1, 1)에 요소 배치 / scale로 반응형 사용 origin-top-left는 스케일 줄어듦 기준 적용  -->
+    <nav
+      class="col-start-1 row-start-1 m-4 border origin-top-left text-white text-sm scale-50 sm:scale-75 md:scale-90 lg:scale-100">
+
+      <!-- 네이게이션들 간 기본 가로축 정렬 및 버튼 간격 조정 -->
       <div class="flex gap-3">
-        <button class="text-3xl gap-3 font-extrabold tracking-tight text-red-600">NETFLIX</button>
-        <button>홈</button>
-        <button>시리즈</button>
-        <button>영화</button>
-        <button>게임</button>
-        <button>NEW! 요즘 대세 콘텐츠</button>
-        <button>내가 찜한 리스트</button>
-        <button>언어별로 찾아보기</button>
+
+        <!-- 3xl 옵션은 꽤 크게 텍스트를 조정, 폰트 조정, 넷플의 글자간격 가깝게, 색상 강도 조정   -->
+        <button class="text-3xl font-extrabold tracking-tight text-red-600">NETFLIX</button>
+
+        <!-- 버튼을 제외한 나머지 버튼이 화면창md 이상일 경우 보여지고 아닌 경우 hidden -->
+        <div class="hidden md:block mt-3">
+          <button>홈</button>
+          <button>시리즈</button>
+          <button>영화</button>
+          <button>게임</button>
+          <button>NEW! 요즘 대세 콘텐츠</button>
+          <button>내가 찜한 리스트</button>
+          <button>언어별로 찾아보기</button>
+        </div>
+
+
+
+        <!-- 화면창md 이상일 경우 메뉴 상태창 hidden -->
+        <div class="relative md:hidden mt-3 group">
+
+          <!-- 메뉴 상태 버튼 -->
+          <button class="cursor-pointer list-none">
+            메뉴⏷
+          </button>
+
+          <!-- 메뉴 상태 버튼을 클릭했을 때 details가  -->
+          <div class="absolute mt-2 top-full flex flex-col bg-black w-64 hidden group-hover:block">
+            <button>홈</button>
+            <button>시리즈</button>
+            <button>영화</button>
+            <button>게임</button>
+            <button>NEW! 요즘 대세 콘텐츠</button>
+            <button>내가 찜한 리스트</button>
+            <button>언어별로 찾아보기</button>
+          </div>
+        </div>
+
       </div>
+
+
+
+
     </nav>
 
   </div>
+
+
 
 </body>
 
