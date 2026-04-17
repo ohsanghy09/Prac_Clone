@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./resource/Netflix.ico" />
+  <link rel="icon" href="./assets/logo/Netflix.ico" />
   <title>홈 - 넷플릭스</title>
   <!-- CDN : Content Delivery Network, 인터넷에 있는 파일을 링크로 가져다 쓰는 것. -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +20,7 @@
   <header class="grid">
 
     <!-- 비디오 배경, 여기서 column과 row의 start가 의미하는 건 "행렬" -->
-    <video src="./resource/dvd.mp4" autoplay muted loop aspect-video
+    <video src="./assets/dvd/dvd.mp4" autoplay muted loop aspect-video
       class="col-start-1 row-start-1 w-full h-full"></video>
 
 
@@ -74,7 +74,7 @@
 
           <!-- 검색  -->
           <button class="cursor-pointer w-[3.2vw] h-[3.2vw]">
-            <img src="./resource/search.png" />
+            <img src="./assets/icon/icon_search.png" />
           </button>
 
 
@@ -82,7 +82,7 @@
           <div class="relative group w-[3.2vw] h-[3.2vw]">
 
             <button class="cursor-pointer ">
-              <img src="./resource/bell.png" />
+              <img src="./assets/icon/icon_bell.png" />
             </button>
 
             <div class="absolute right-1/2 top-full hidden group-hover:flex flex-col gap-[0.5vw] bg-black/60 w-[14vw]">
@@ -102,7 +102,7 @@
           <div class="relative group w-[3.2vw] h-[3.2vw]">
 
             <button class="cursor-pointer ">
-              <img src="./resource/profile.jpg" class="rounded-xl" />
+              <img src="./assets/images/profile.jpg" class="rounded-xl" />
             </button>
 
             <div
@@ -125,7 +125,7 @@
     <!-- 중간 문구 -->
     <div class="col-start-1 row-start-1 flex flex-col gap-[1.5vw] justify-center ml-[4vw]">
 
-      <img src="./resource/dvd_cover.png" class="w-[20vw] h-[3vw]" />
+      <img src="./assets/images/dvd_cover.png" class="w-[20vw] h-[3vw]" />
 
       <p class="text-[1.2vw]">
         지금, 우리가 사는 지구에서 펼쳐지는 이야기.
@@ -140,7 +140,7 @@
         </button>
 
         <button class="flex items-center gap-[0.5vw] px-[2vw] py-[0.8vw] bg-black/30 rounded backdrop-blur hover:bg-black/10 transition">
-          <img src="./resource/icon_info.png" class="w-[1.5vw] h-[1.5vw]">
+          <img src="./assets/icon/icon_info.png" class="w-[1.5vw] h-[1.5vw]">
           <span class="text-white font-semibold text-[1vw]">상세 정보</span>
         </button>
 
@@ -178,7 +178,7 @@
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=1" class="w-full h-full" />
+          <img src="./assets/images/everyone_love/everyone_love (1).jpg" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -198,14 +198,14 @@
 
 
 
-        <img src="https://picsum.photos/300/170?random=2" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/everyone_love/everyone_love (2).webp" class="w-[23.5%] shrink-0 aspect-video rounded" />
 
         <!-- 카드 -->
         <!-- 부모요소 틀 16/9 -->
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=3" class="w-full h-full" />
+          <img src="./assets/images/everyone_love/everyone_love (3).webp" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -224,8 +224,8 @@
         </div>
 
 
-        <img src="https://picsum.photos/300/170?random=4" class="w-[23.5%] shrink-0 aspect-video rounded" />
-        <img src="https://picsum.photos/300/170?random=5"
+        <img src="./assets/images/everyone_love/everyone_love (4).webp" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/everyone_love/everyone_love (5).webp"
           class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
 
 
@@ -234,7 +234,7 @@
                bg-black/50
                opacity-0 hover:opacity-100
                transition rounded rounded-r-none">
-          ❯
+          <span class="text-[clamp(12px,8vw,40px)]">❯</span>
         </button>
       </div>
 
@@ -254,7 +254,7 @@
 
 
         <!-- 첫 번째 사진 -->
-        <img src="https://picsum.photos/300/170?random=1" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/my_list/my_list (1).jpg" class="w-[23.5%] shrink-0 aspect-video rounded" />
 
 
         <!-- 두번 째 사진 -->
@@ -262,7 +262,7 @@
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=2" class="w-full h-full" />
+          <img src="./assets/images/my_list/my_list (2).webp" class="w-full h-full" />
 
           <!-- 하단 텍스트 -->
           <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
@@ -276,7 +276,7 @@
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=3" class="w-full h-full" />
+          <img src="./assets/images/my_list/my_list (3).webp" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -295,8 +295,8 @@
         </div>
 
 
-        <img src="https://picsum.photos/300/170?random=4" class="w-[23.5%] shrink-0 aspect-video rounded" />
-        <img src="https://picsum.photos/300/170?random=5"
+        <img src="./assets/images/my_list/my_list (4).webp" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/my_list/my_list (5).jpg"
           class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
 
 
@@ -305,7 +305,7 @@
                bg-black/50
                opacity-0 hover:opacity-100
                transition rounded rounded-r-none">
-          ❯
+          <span class="text-[clamp(12px,8vw,40px)]">❯</span>
         </button>
       </div>
 
@@ -325,7 +325,7 @@
 
 
         <!-- 첫 번째 사진-->
-        <img src="https://picsum.photos/300/170?random=1" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/today_contents/today_contents (1).webp" class="w-[23.5%] shrink-0 aspect-video rounded" />
 
 
         <!-- 두 번째 사진-->
@@ -334,7 +334,7 @@
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=2" class="w-full h-full" />
+          <img src="./assets/images/today_contents/today_contents (2).webp" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -353,14 +353,14 @@
         </div>
 
         <!-- 세 번째 사진 -->
-        <img src="https://picsum.photos/300/170?random=3" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/today_contents/today_contents (3).webp" class="w-[23.5%] shrink-0 aspect-video rounded" />
 
         <!-- 네 번째 사진 -->
         <!-- 부모요소 틀 16/9 -->
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=4" class="w-full h-full" />
+          <img src="./assets/images/today_contents/today_contents (4).webp" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -372,7 +372,7 @@
 
         </div>
 
-        <img src="https://picsum.photos/300/170?random=5"
+        <img src="./assets/images/today_contents/today_contents (5).webp"
           class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
 
 
@@ -381,7 +381,7 @@
                bg-black/50
                opacity-0 hover:opacity-100
                transition rounded rounded-r-none">
-          ❯
+          <span class="text-[clamp(12px,8vw,40px)]">❯</span>
         </button>
       </div>
 
@@ -405,7 +405,7 @@
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=1" class="w-full h-full" />
+          <img src="./assets/images/favorite/favorite (1).jpg" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -425,14 +425,14 @@
 
 
 
-        <img src="https://picsum.photos/300/170?random=2" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/favorite/favorite (2).webp" class="w-[23.5%] shrink-0 aspect-video rounded" />
 
         <!-- 카드 -->
         <!-- 부모요소 틀 16/9 -->
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=3" class="w-full h-full" />
+          <img src="./assets/images/favorite/favorite (3).webp" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -455,7 +455,7 @@
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=4" class="w-full h-full" />
+          <img src="./assets/images/favorite/favorite (4).webp" class="w-full h-full" />
 
           <!-- 하단 텍스트 -->
           <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
@@ -465,7 +465,7 @@
         </div>
 
 
-        <img src="https://picsum.photos/300/170?random=5"
+        <img src="./assets/images/favorite/favorite (5).webp"
           class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
 
 
@@ -474,7 +474,7 @@
                bg-black/50
                opacity-0 hover:opacity-100
                transition rounded rounded-r-none">
-          ❯
+          <span class="text-[clamp(12px,8vw,40px)]">❯</span>
         </button>
       </div>
 
@@ -498,7 +498,7 @@
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=1" class="w-full h-full" />
+          <img src="./assets/images/foreign_series/foreign_series (1).jpg" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -517,17 +517,17 @@
 
 
         <!-- 두번째 사진 -->
-        <img src="https://picsum.photos/300/170?random=2" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/foreign_series/foreign_series (2).webp" class="w-[23.5%] shrink-0 aspect-video rounded" />
 
         <!-- 세번 째 사진 -->
-        <img src="https://picsum.photos/300/170?random=3" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="./assets/images/foreign_series/foreign_series (3).jpg" class="w-[23.5%] shrink-0 aspect-video rounded" />
 
         <!-- 네번 째 사진 -->
         <!-- 부모요소 틀 16/9 -->
         <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
 
           <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
-          <img src="https://picsum.photos/300/170?random=4" class="w-full h-full" />
+          <img src="./assets/images/foreign_series/foreign_series (4).jpg" class="w-full h-full" />
 
           <!-- TOP 10 / leading-none : 줄간격 없애기 -->
           <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
@@ -546,7 +546,7 @@
         </div>
 
         <!-- 마지막사진 -->
-        <img src="https://picsum.photos/300/170?random=5"
+        <img src="./assets/images/foreign_series/foreign_series (5).webp"
           class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
 
 
@@ -555,7 +555,7 @@
                bg-black/50
                opacity-0 hover:opacity-100
                transition rounded rounded-r-none">
-          ❯
+          <span class="text-[clamp(12px,8vw,40px)]">❯</span>
         </button>
       </div>
 
@@ -576,10 +576,10 @@
       <section>
         <div class="flex items-center gap-6 text-white text-[clamp(18px,1.3vw,24px)]">
           <button>f</button>
-          <button class="w-[clamp(18px,1.3vw,24px)] h-[clamp(18px,1.3vw,24px)]"><img src="./resource/icon_instagram.png"
+          <button class="w-[clamp(18px,1.3vw,24px)] h-[clamp(18px,1.3vw,24px)]"><img src="./assets/icon/icon_instagram.png"
               class="w-full h-full"></button>
           <button>𝕏</button>
-          <button class="w-[clamp(18px,1.3vw,24px)] h-[clamp(18px,1.3vw,24px)]"><img src="./resource/icon_youtube.png"
+          <button class="w-[clamp(18px,1.3vw,24px)] h-[clamp(18px,1.3vw,24px)]"><img src="./assets/icon/icon_youtube.png"
               class="w-full h-full"></button>
         </div>
       </section>
