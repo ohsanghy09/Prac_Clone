@@ -35,7 +35,7 @@
         <div class="flex gap-[1vw] origin-top-left text-white text-[0.9vw]">
 
           <!-- 텍스트 및 폰트 조정, 넷플의 글자간격 가깝게, 색상 강도 조정   -->
-          <button class="text-[2vw] font-extrabold tracking-tight text-red-600">NETFLIX</button>
+          <button class="text-[2vw] font-extrabold tracking-tight text-red-600 mr-[0.5vw]">NETFLIX</button>
 
           <!-- 화면창 lg 이상일 경우 flex 아니면 hidden -->
           <div class="hidden lg:flex gap-[0.8vw] mt-[0.2vw]">
@@ -166,19 +166,393 @@
 
   <!-- 주요 내용 -->
   <!-- absolute는 부모 기준으로 배치, 부모요소 div의 비율로 왼쪽으로 4% 차지, 넓이는 96%차지 -->
-  <main class="absolute top-[44vw] left-[4%] w-[96%] flex flex-col gap-[1.5vw]">
+  <main class="absolute top-[44vw] left-[4%] w-[96%] flex flex-col gap-[5vw] md:gap-[4vw] lg:gap-[3vw]">
 
+    <!-- 누구나 사랑하는 명작 -->
     <section class="flex flex-col gap-[0.5vw]">
 
-      <span class="text-sm">누구나 사랑하는 명작</span>
+      <!-- 텍스트 크기 최소 10px, 기본 0.8vw, 최대 18px -->
+      <span class="text-[clamp(12px,0.8vw,18px)]">누구나 사랑하는 명작</span>
 
       <!-- 좌우 갭 section에서 벗어나지 않게 0.3% 적용, overflow로 화면 밖으로 나가는 건 잘라냄, 부모 -->
-      <div class="flex gap-[0.3%] overflow-hidden relative border">
-        <img src="https://picsum.photos/300/170?random=1" class="w-[23.5%] shrink-0 aspect-video rounded" />
+      <div class="flex gap-[0.3%] overflow-hidden relative">
+
+
+        <!-- 카드 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=1" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none rounded-tr-none">새 에피소드</span>
+              <span class="bg-white px-[0.4vw] text-black rounded rounded-b-none rounded-tl-none">지금 시청하기</span>
+          </div>
+
+        </div>
+
+
+
         <img src="https://picsum.photos/300/170?random=2" class="w-[23.5%] shrink-0 aspect-video rounded" />
-        <img src="https://picsum.photos/300/170?random=3" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        
+        <!-- 카드 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=3" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none rounded-tr-none">새 에피소드</span>
+              <span class="bg-white px-[0.4vw] text-black rounded rounded-b-none rounded-tl-none">지금 시청하기</span>
+          </div>
+
+        </div>
+
+
         <img src="https://picsum.photos/300/170?random=4" class="w-[23.5%] shrink-0 aspect-video rounded" />
-        <img src="https://picsum.photos/300/170?random=5" class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="https://picsum.photos/300/170?random=5"
+          class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
+
+
+        <!-- 잘린 영역 위에 올릴 버튼 / 부모기준 위, 우측에서 0만큼 떨어짐, 부모 높이 100%로 차지 -->
+        <button class="absolute top-0 right-0 h-full w-[4.80%]
+               bg-black/50
+               opacity-0 hover:opacity-100
+               transition rounded rounded-r-none">
+          ❯
+        </button>
+      </div>
+
+
+    </section>
+
+
+
+
+    <!-- 내가 찜한 리스트 -->
+    <section class="flex flex-col gap-[0.5vw]">
+
+      <span class="text-[clamp(12px,0.8vw,18px)]">내가 찜한 리스트</span>
+
+      <!-- 좌우 갭 section에서 벗어나지 않게 0.3% 적용, overflow로 화면 밖으로 나가는 건 잘라냄, 부모 -->
+      <div class="flex gap-[0.3%] overflow-hidden relative">
+
+
+        <!-- 첫 번째 사진 -->
+        <img src="https://picsum.photos/300/170?random=1" class="w-[23.5%] shrink-0 aspect-video rounded" />
+
+
+        <!-- 두번 째 사진 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=2" class="w-full h-full" />
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none">새로운 시즌</span>
+          </div>
+
+        </div>
+        
+        <!-- 세번 째 사진 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=3" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none rounded-tr-none">새 에피소드</span>
+              <span class="bg-white px-[0.4vw] text-black rounded rounded-b-none rounded-tl-none">지금 시청하기</span>
+          </div>
+
+        </div>
+
+
+        <img src="https://picsum.photos/300/170?random=4" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="https://picsum.photos/300/170?random=5"
+          class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
+
+
+        <!-- 잘린 영역 위에 올릴 버튼 / 부모기준 위, 우측에서 0만큼 떨어짐, 부모 높이 100%로 차지 -->
+        <button class="absolute top-0 right-0 h-full w-[4.80%]
+               bg-black/50
+               opacity-0 hover:opacity-100
+               transition rounded rounded-r-none">
+          ❯
+        </button>
+      </div>
+
+
+    </section>
+
+
+
+<!-- 회원님을 위해 엄선한 오늘의 콘텐츠 -->
+    <section class="flex flex-col gap-[0.5vw]">
+
+      <span class="text-[clamp(12px,0.8vw,18px)]">회원님을 위해 엄선한 오늘의 콘텐츠</span>
+
+      <!-- 좌우 갭 section에서 벗어나지 않게 0.3% 적용, overflow로 화면 밖으로 나가는 건 잘라냄, 부모 -->
+      <div class="flex gap-[0.3%] overflow-hidden relative">
+
+
+
+        <!-- 첫 번째 사진-->
+        <img src="https://picsum.photos/300/170?random=1" class="w-[23.5%] shrink-0 aspect-video rounded" />
+
+
+        <!-- 두 번째 사진-->
+        <!-- 카드 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=2" class="w-full h-full"/>
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none rounded-tr-none">새 에피소드</span>
+              <span class="bg-white px-[0.4vw] text-black rounded rounded-b-none rounded-tl-none">지금 시청하기</span>
+          </div>
+
+        </div>
+
+        <!-- 세 번째 사진 -->
+        <img src="https://picsum.photos/300/170?random=3" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        
+        <!-- 네 번째 사진 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=4" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+        </div>
+
+        <img src="https://picsum.photos/300/170?random=5"
+          class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
+
+
+        <!-- 잘린 영역 위에 올릴 버튼 / 부모기준 위, 우측에서 0만큼 떨어짐, 부모 높이 100%로 차지 -->
+        <button class="absolute top-0 right-0 h-full w-[4.80%]
+               bg-black/50
+               opacity-0 hover:opacity-100
+               transition rounded rounded-r-none">
+          ❯
+        </button>
+      </div>
+
+
+    </section>
+
+
+
+
+    <!-- 마음에 쏙 드실 거예요 -->
+    <section class="flex flex-col gap-[0.5vw]">
+
+      <span class="text-[clamp(12px,0.8vw,18px)]">마음에 쏙 드실 거예요</span>
+
+      <!-- 좌우 갭 section에서 벗어나지 않게 0.3% 적용, overflow로 화면 밖으로 나가는 건 잘라냄, 부모 -->
+      <div class="flex gap-[0.3%] overflow-hidden relative">
+
+
+        <!-- 카드 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=1" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none rounded-tr-none">새 에피소드</span>
+              <span class="bg-white px-[0.4vw] text-black rounded rounded-b-none rounded-tl-none">지금 시청하기</span>
+          </div>
+
+        </div>
+
+
+
+        <img src="https://picsum.photos/300/170?random=2" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        
+        <!-- 카드 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=3" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none rounded-tr-none">새 에피소드</span>
+              <span class="bg-white px-[0.4vw] text-black rounded rounded-b-none rounded-tl-none">지금 시청하기</span>
+          </div>
+
+        </div>
+
+
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=4" class="w-full h-full" />
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none">새로운 시즌</span>
+          </div>
+
+        </div>
+
+
+        <img src="https://picsum.photos/300/170?random=5"
+          class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
+
+
+        <!-- 잘린 영역 위에 올릴 버튼 / 부모기준 위, 우측에서 0만큼 떨어짐, 부모 높이 100%로 차지 -->
+        <button class="absolute top-0 right-0 h-full w-[4.80%]
+               bg-black/50
+               opacity-0 hover:opacity-100
+               transition rounded rounded-r-none">
+          ❯
+        </button>
+      </div>
+
+
+    </section>
+
+
+
+
+    <!-- 긴장감 넘치는 해외 시리즈 -->
+    <section class="flex flex-col gap-[0.5vw]">
+
+      <span class="text-[clamp(12px,0.8vw,18px)]">긴장감 넘치는 해외 시리즈</span>
+
+      <!-- 좌우 갭 section에서 벗어나지 않게 0.3% 적용, overflow로 화면 밖으로 나가는 건 잘라냄, 부모 -->
+      <div class="flex gap-[0.3%] overflow-hidden relative">
+
+
+        <!-- 카드 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=1" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none">새로운 시즌</span>
+          </div>
+
+        </div>
+
+
+        <!-- 두번째 사진 -->
+        <img src="https://picsum.photos/300/170?random=2" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        
+        <!-- 세번 째 사진 -->
+        <img src="https://picsum.photos/300/170?random=3" class="w-[23.5%] shrink-0 aspect-video rounded" />
+
+        <!-- 네번 째 사진 -->
+        <!-- 부모요소 틀 16/9 -->
+        <div class="relative w-[23.5%] shrink-0 aspect-video rounded overflow-hidden">
+
+          <!-- 이미지 / 화면을 부모요소 틀에 맞게 다 채움 -->
+          <img src="https://picsum.photos/300/170?random=4" class="w-full h-full" />
+
+          <!-- TOP 10 / leading-none : 줄간격 없애기 -->
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-[0.5vw] rounded py-[0.2vw]">
+            <div class="flex flex-col items-center leading-none"> 
+              <span class="text-[0.7vw]">TOP</span>
+              <span class="text-[1vw]">10</span>
+            </div>
+          </div>
+
+          <!-- 하단 텍스트 -->
+          <div class="absolute bottom-0 font-semibold flex justify-center text-[0.7vw] w-full">
+              <span class="bg-red-600 px-[0.4vw] text-white rounded rounded-b-none rounded-tr-none">새 에피소드</span>
+              <span class="bg-white px-[0.4vw] text-black rounded rounded-b-none rounded-tl-none">지금 시청하기</span>
+          </div>
+
+        </div>
+
+        <!-- 마지막사진 -->
+        <img src="https://picsum.photos/300/170?random=5"
+          class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
 
 
         <!-- 잘린 영역 위에 올릴 버튼 / 부모기준 위, 우측에서 0만큼 떨어짐, 부모 높이 100%로 차지 -->
