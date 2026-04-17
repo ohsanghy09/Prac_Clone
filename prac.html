@@ -7,10 +7,25 @@
 
 <body class="">
 
-  <div class="relative w-[300px]">
-  <img src="/resource/profile.jpg" class="w-full" />
+  <div class="group relative w-[300px]">
 
-  <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
+  <!-- 이미지 -->
+  <img src="./resource/profile.jpg"
+       class="w-full aspect-video object-cover rounded" />
+
+  <!-- 버튼 -->
+  <button
+    class="absolute right-0 top-0 h-full w-full
+           flex items-center justify-center
+           bg-black/50 text-white text-xl
+
+           opacity-0
+           group-hover:opacity-100
+
+           transition duration-300">
+    ❯
+  </button>
+
 </div>
 
 </body>
