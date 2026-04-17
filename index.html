@@ -23,7 +23,8 @@
 
 
       <!-- 비디오 배경, 여기서 column과 row의 start가 의미하는 건 "행렬" -->
-      <video src="./resource/dvd.mp4" autoplay muted loop aspect-video class="col-start-1 row-start-1 w-full h-full"></video>
+      <video src="./resource/dvd.mp4" autoplay muted loop aspect-video
+        class="col-start-1 row-start-1 w-full h-full"></video>
 
 
       <!-- 네비게이션 속성 행렬(1, 1)에 요소 배치  -->
@@ -164,33 +165,32 @@
 
 
   <!-- 주요 내용 -->
-  <!-- absolute는 부모 기준으로 배치, 부모요소 body의 비율로 왼쪽으로 4% 차지, 넓이는 96%차지 -->
+  <!-- absolute는 부모 기준으로 배치, 부모요소 div의 비율로 왼쪽으로 4% 차지, 넓이는 96%차지 -->
   <main class="absolute top-[44vw] left-[4%] w-[96%] flex flex-col gap-[1.5vw]">
 
-    <!-- 누구나 사랑하는 명작 -->
-    <section class="flex flex-col border gap-[0.5vw]">
+    <section class="flex flex-col gap-[0.5vw]">
 
       <span class="text-sm">누구나 사랑하는 명작</span>
 
-      <!-- 이미지 요소, 버튼을 가로 배치 -->
-      <div class="flex gap-[0.3%]">
+      <!-- 좌우 갭 section에서 벗어나지 않게 0.3% 적용, overflow로 화면 밖으로 나가는 건 잘라냄, 부모 -->
+      <div class="flex gap-[0.3%] overflow-hidden relative border">
+        <img src="https://picsum.photos/300/170?random=1" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="https://picsum.photos/300/170?random=2" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="https://picsum.photos/300/170?random=3" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="https://picsum.photos/300/170?random=4" class="w-[23.5%] shrink-0 aspect-video rounded" />
+        <img src="https://picsum.photos/300/170?random=5" class="brightness-50 w-[23.5%] shrink-0 aspect-video rounded" />
 
-        <!-- grid로 4개의 column 생성, flex-1으로 이미지 grid 공간 차지 -->
-        <div class="grid grid-cols-4 flex-1 gap-[0.3%]">
 
-          <!-- 이미지는 16/9 비율차지-->
-          <img src="./resource/profile.jpg" class="aspect-video rounded" />
-          <img src="./resource/profile.jpg" class="aspect-video rounded" />
-          <img src="./resource/profile.jpg" class="aspect-video rounded" />
-          <img src="./resource/profile.jpg" class="aspect-video rounded" />
-        </div>
-
-        <!-- 부모 요소 div를 기준으로 4% 차지 나머지는 이미지의 flex-1로 빈공간 채움 -->
-        <button class="w-[4%] opacity-0 hover:opacity-100 transition rounded border">
+        <!-- 잘린 영역 위에 올릴 버튼 / 부모기준 위, 우측에서 0만큼 떨어짐, 부모 높이 100%로 차지 -->
+        <button class="absolute top-0 right-0 h-full w-[4.80%]
+               bg-black/50
+               opacity-0 hover:opacity-100
+               transition rounded rounded-r-none">
           ❯
         </button>
-
       </div>
+
+
     </section>
 
   </main>
